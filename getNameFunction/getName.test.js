@@ -1,6 +1,6 @@
 const getName = require('./getName');
 
-describe('getName Function', () => {
+describe('getName Function Dog', () => {
   it('should return the name property of an object', () => {
     const dog = {
       name: 'spot',
@@ -12,9 +12,12 @@ describe('getName Function', () => {
   });
 });
 
-describe('getName Function 2', () => {
+describe('getName Function Char', () => {
   it('should return the name property of an object', () => {
-    const char = { _id: '5cf5679a915ecad153ab68c9', name: 'Aang' };
+    const char = {
+      _id: '5cf5679a915ecad153ab68c9',
+      name: 'Aang',
+    };
     const charName = getName(char);
     expect(charName).toEqual('Aang');
   });

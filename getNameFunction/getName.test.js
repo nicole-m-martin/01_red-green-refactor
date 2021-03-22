@@ -3,11 +3,19 @@ const getName = require('./getName');
 describe('getName Function', () => {
   it('should return the name property of an object', () => {
     const dog = {
-      name: ['spot'],
-      age: [5],
-      weight: ['20 lbs'],
+      name: 'spot',
+      age: 5,
+      weight: '20 lbs',
     };
     const dogName = getName(dog);
-    expect(dogName).toEqual(['spot']);
+    expect(dogName).toEqual('spot');
+  });
+});
+
+describe('getName Function 2', () => {
+  it('should return the name property of an object', () => {
+    const char = { _id: '5cf5679a915ecad153ab68c9', name: 'Aang' };
+    const charName = getName(char);
+    expect(charName).toEqual('Aang');
   });
 });
